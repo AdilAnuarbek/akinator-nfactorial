@@ -1,0 +1,22 @@
+{{define "header"}}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/styles.css"/> -->
+</head>
+<body>
+    HEADER
+{{end}}
+{{define "footer"}}
+<script>
+    function closeAlert(event) {
+        let closeable = event.target.closest(".closeable");
+        closeable.remove();
+        // closeable.classList.add("hidden");
+    }
+</script>
+</body>
+</html>
+{{end}}
