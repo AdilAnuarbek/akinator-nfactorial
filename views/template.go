@@ -15,6 +15,13 @@ type Template struct {
 	htmlTpl *template.Template
 }
 
+func Must(t Template, err error) Template {
+	if err != nil {
+		panic(err)
+	}
+	return t
+}
+
 func (t Template) Execute(w http.ResponseWriter, r *http.Request, data any) {
 	tpl, err := t.htmlTpl.Clone()
 	if err != nil {

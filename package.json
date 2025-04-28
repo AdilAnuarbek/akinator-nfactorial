@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aki-api": "^7.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node_akinator": "^1.0.3"
+  }
+}

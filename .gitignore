@@ -1,0 +1,4 @@
+*.css
+*.env
+node_modules/
+static/

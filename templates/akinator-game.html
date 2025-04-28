@@ -1,0 +1,47 @@
+{{template "header" .}}
+{{if .Win}}
+<div>
+    I think of {{.Name}}
+</div>
+<div>
+    <form action="/play/guess" method="post" style="display:inline-block;">
+        <input type="hidden" name="guess" value="1">
+        <button type="submit">Yes</button>
+    </form>
+    <form action="/play/guess" method="post" style="display:inline-block;">
+        <input type="hidden" name="guess" value="0">
+        <button type="submit">No</button>
+    </form>
+</div>
+{{else}}
+<div>
+    Question: {{.Question}}
+    <br>
+</div>
+<div>
+    <br>
+    <div>
+        <form action="/play/answer" method="post" style="display:inline-block;">
+            <input type="hidden" name="answer" value="0">
+            <button type="submit">Yes</button>
+        </form>
+        <form action="/play/answer" method="post" style="display:inline-block;">
+            <input type="hidden" name="answer" value="1">
+            <button type="submit">No</button>
+        </form>
+        <form action="/play/answer" method="post" style="display:inline-block;">
+            <input type="hidden" name="answer" value="2">
+            <button type="submit">Don't know</button>
+        </form>
+        <form action="/play/answer" method="post" style="display:inline-block;">
+            <input type="hidden" name="answer" value="3">
+            <button type="submit">Probably</button>
+        </form>
+        <form action="/play/answer" method="post" style="display:inline-block;">
+            <input type="hidden" name="answer" value="4">
+            <button type="submit">Probably not</button>
+        </form>
+    </div>
+</div>
+{{end}}
+{{template "footer" .}}
