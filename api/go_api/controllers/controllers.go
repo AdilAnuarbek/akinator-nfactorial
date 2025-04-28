@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/AdilAnuarbek/akinator-nfactorial/models"
+	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/models"
 	"github.com/go-chi/chi/v5"
 )
 

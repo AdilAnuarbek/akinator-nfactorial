@@ -122,7 +122,4 @@ app.post('/guess', async (req, res) => {
     }
 })
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Akinator proxy listening on port ${PORT}`);
-});
+module.exports = app;

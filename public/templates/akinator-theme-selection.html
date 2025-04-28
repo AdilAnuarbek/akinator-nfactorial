@@ -1,0 +1,23 @@
+{{template "header" .}}
+    <main class="site-content">
+        <h1>Select a Theme</h1>
+        <p>Choose a theme for your Akinator game:</p>
+        <ul>
+            <li>
+                <form action="/play/characters" method="post">
+                    <button type="submit">Characters</button>
+                </form>
+            </li>
+            <li>
+                <form action="/play/objects" method="post">
+                    <button type="submit">Objects</button>
+                </form>
+            </li>
+            <li>
+                <form action="/play/animals" method="post">
+                    <button type="submit">Animals</button>
+                </form>
+            </li>
+        </ul>
+    </main>
+{{template "footer" .}}
