@@ -12,15 +12,15 @@
 
 Для того чтобы использовать данный проект на своём ПК, вам нужен [golang](https://go.dev/doc/install) и [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) скачанный на вашем ПК. Затем, скачайте репозиторий или склонируйте его и в нужную папку:
 ```bash
-  git clone https://github.com/AdilAnuarbek/akinator-nfactorial
+git clone https://github.com/AdilAnuarbek/akinator-nfactorial
 ```
 Откройте папку проекта в коммандной строке:
 ```bash
-  cd my-project
+cd my-project
 ```
 Установите нужные библиотеки npm:
 ```bash
-  npm install cors express node_akinator
+npm install cors express node_akinator
 ```
 
 ## Запуск
@@ -28,10 +28,10 @@
 Откройте две коммандной строки и введите каждый из следующих комманд:
 
 ```bash
-  node api/node_api/server.js
+node api/node_api/server.js
 ```
 ```bash
-  go run api/go_api/server.go
+go run api/go_api/server.go
 ```
 
 ## Процесс проектирования и разработки
