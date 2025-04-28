@@ -5,8 +5,8 @@ import (
 
 	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/controllers"
 	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/models"
+	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/templates"
 	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/views"
-	"github.com/AdilAnuarbek/akinator-nfactorial/public/templates"
 	"github.com/go-chi/chi/v5"
 )
 

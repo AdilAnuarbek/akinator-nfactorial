@@ -2,18 +2,30 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/go-api/main.go",
+        "src": "api/go_api/server.go",
         "use": "@vercel/go"
+      },
+      {
+        "src": "api/node_api/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "api/go_api/public/static/**",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
       {
         "src": "/static/(.*)",
-        "dest": "/public/static/$1"
+        "dest": "/api/go_api/public/static/$1"
+      },
+      {
+        "src": "/api/node/(.*)",
+        "dest": "/api/node_api/server.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/api/go-api/main.go"
+        "dest": "/api/go_api/server.go"
       }
     ]
   }
