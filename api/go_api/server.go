@@ -1,6 +1,7 @@
-package handler
+package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/AdilAnuarbek/akinator-nfactorial/api/go_api/controllers"
@@ -16,10 +17,10 @@ var (
 	handlers        *controllers.Handlers
 )
 
-func init() {
+func main() {
 	router = chi.NewRouter()
-	assetsHandler := http.FileServer(http.Dir("public/static"))
-	router.Get("/public/static/*", http.StripPrefix("/public/static", assetsHandler).ServeHTTP)
+	assetsHandler := http.FileServer(http.Dir("api/go_api/public/static"))
+	router.Get("/api/go_api/public/static/*", http.StripPrefix("/api/go_api/public/static", assetsHandler).ServeHTTP)
 	// Home and info pages
 	router.Get("/", controllers.StaticHandler(views.Must(views.ParseFS(templates.FS, "home.html", "base.html"))))
 	router.Get("/info", controllers.StaticHandler(views.Must(views.ParseFS(templates.FS, "info.html", "base.html"))))
@@ -36,7 +37,8 @@ func init() {
 		r.Post("/guess", handlers.Guess)
 		r.Get("/win", controllers.StaticHandler(views.Must(views.ParseFS(templates.FS, "akinator-end.html", "base.html"))))
 	})
-
+	fmt.Println("Server started at http://localhost:8080")
+	http.ListenAndServe(":8080", router)
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {

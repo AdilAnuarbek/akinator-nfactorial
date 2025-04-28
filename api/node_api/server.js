@@ -43,7 +43,6 @@ app.post('/start', async (req, res) => {
 
         const aki = new AkinatorClient(Region, true, Theme);
         const start = await aki.start();  // begin game
-        
         sessions.set(sessionId, aki);
         res.json({
             question: start.question,  // first question
@@ -122,4 +121,4 @@ app.post('/guess', async (req, res) => {
     }
 })
 
-module.exports = app;
+app.listen(3000, () => console.log("Server ready on port 3000."));
